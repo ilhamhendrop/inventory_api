@@ -1,19 +1,19 @@
 package config
 
 type MysqlDB struct {
-	Host     string
-	Port     string
-	Name     string
-	User     string
-	Password string
-	Tz       string
+	Host string
+	Port string
+	Name string
+	User string
+	Pass string
+	Tz   string
 }
 
 type RedisDB struct {
-	Host     string
-	Port     string
-	Password string
-	DB       int
+	Host string
+	Port string
+	Pass string
+	DB   int
 }
 
 type Jwt struct {

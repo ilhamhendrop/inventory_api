@@ -17,7 +17,7 @@ func GetRedisCache(conf config.RedisDB) *redis.Client {
 
 	cache := redis.NewClient(&redis.Options{
 		Addr:         addr,
-		Password:     conf.Password,
+		Password:     conf.Pass,
 		DB:           conf.DB,
 		DialTimeout:  5 * time.Minute,
 		ReadTimeout:  3 * time.Minute,

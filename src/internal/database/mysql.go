@@ -12,7 +12,7 @@ import (
 
 func GetMySQLDB(conf config.MysqlDB) *sql.DB {
 	user := url.QueryEscape(conf.User)
-	pass := url.QueryEscape(conf.Password)
+	pass := url.QueryEscape(conf.Pass)
 	tz := url.QueryEscape(conf.Tz)
 
 	dsn := fmt.Sprintf(

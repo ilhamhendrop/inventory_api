@@ -101,12 +101,12 @@ func (c *Cache) Get(ctx context.Context, key string, dest any) error {
 	return json.Unmarshal(b, dest)
 }
 
-func (c *Cache) Delete(ctx context.Context, keys ...string) {
+func (c *Cache) Delete(ctx context.Context, keys ...string) error {
 	var fullKeys []string
 	for _, k := range keys {
 		fullKeys = append(fullKeys, c.key(k))
 	}
-	c.rdb.Del(ctx, fullKeys...)
+	return c.rdb.Del(ctx, fullKeys...).Err()
 }
 
 func (c *Cache) DeleteByPrefix(ctx context.Context, prefix string) error {
