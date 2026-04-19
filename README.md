@@ -84,7 +84,11 @@ Perintah ini akan menjalankan:
 
 ## 6. Import Database
 
-Buka phpMyAdmin menggunakan link yang tersedia pada file `.env`.
+Buka phpMyAdmin menggunakan link.
+
+```
+http://localhost:9473
+```
 
 Selanjutnya:
 
