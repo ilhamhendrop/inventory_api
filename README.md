@@ -134,7 +134,7 @@ http://localhost:8000
 
 Pastikan:
 
-* Docker Desktop berjalan
+* Docker Desktop berjalan jika menggunakan windown dan mac
 * Terminal digunakan untuk menjalankan perintah `git clone` dan `docker compose up -d`
 * Port yang digunakan tidak bentrok
 * File `.env` sudah terisi dengan benar
