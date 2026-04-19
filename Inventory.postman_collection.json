@@ -1,0 +1,1225 @@
+{
+  "info": {
+    "_postman_id": "01ddac71-5a4e-4ad3-95b4-0bfd247231fc",
+    "name": "Inventory",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "3722647"
+  },
+  "item": [
+    {
+      "name": "users",
+      "item": [
+        {
+          "name": "List",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcwNjYxMjYsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.26L4ZZyHKJSBd1oQJoUbSo1XdnX5tJ6SOYz9bWrBRsY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Local-8000}}/users",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcwNjYxMjYsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.26L4ZZyHKJSBd1oQJoUbSo1XdnX5tJ6SOYz9bWrBRsY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"username\": \"Admin2\",\n    \"name\": \"Admin2\",\n    \"role\": \"Admin\",\n    \"password\": \"Ab123.Ab\",\n    \"password_confirmation\": \"Ab123.Ab\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Local-8000}}/users",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Search",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcwNjYxMjYsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.26L4ZZyHKJSBd1oQJoUbSo1XdnX5tJ6SOYz9bWrBRsY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Local-8000}}/users/search?q=Admin2",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "users",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "Admin2"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Detail",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcwNjYxMjYsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.26L4ZZyHKJSBd1oQJoUbSo1XdnX5tJ6SOYz9bWrBRsY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Local-8000}}/users/666559fe-29e1-4780-bf2d-479ac8b1a8e1",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "users",
+                "666559fe-29e1-4780-bf2d-479ac8b1a8e1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpdateData",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcwNjYxMjYsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.26L4ZZyHKJSBd1oQJoUbSo1XdnX5tJ6SOYz9bWrBRsY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"username\": \"Admin2\",\n    \"name\": \"Admins2\",\n    \"role\": \"Admin\",\n    \"status\": \"Aktif\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Local-8000}}/users/666559fe-29e1-4780-bf2d-479ac8b1a8e1/data",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "users",
+                "666559fe-29e1-4780-bf2d-479ac8b1a8e1",
+                "data"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpdatePassword",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcwNjYxMjYsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.26L4ZZyHKJSBd1oQJoUbSo1XdnX5tJ6SOYz9bWrBRsY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"password\": \"Ab123.Ab\",\n    \"password_confirmation\": \"Ab123.Ab\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Local-8000}}/users/666559fe-29e1-4780-bf2d-479ac8b1a8e1/password",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "users",
+                "666559fe-29e1-4780-bf2d-479ac8b1a8e1",
+                "password"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcwNjYxMjYsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.26L4ZZyHKJSBd1oQJoUbSo1XdnX5tJ6SOYz9bWrBRsY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{Local-8000}}/users/666559fe-29e1-4780-bf2d-479ac8b1a8e1",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "users",
+                "666559fe-29e1-4780-bf2d-479ac8b1a8e1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "categories",
+      "item": [
+        {
+          "name": "List",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcwODg2NzMsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.gzAaQTBTRnPcMUnpA2FcjJlR0ZFcgDiwN4TXW-3wXqQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Local-8000}}/categories",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "categories"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcwNjYxMjYsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.26L4ZZyHKJSBd1oQJoUbSo1XdnX5tJ6SOYz9bWrBRsY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Laptop\",\n    \"description\": \"Laptop\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Local-8000}}/categories",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "categories"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Search",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcwNjYxMjYsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.26L4ZZyHKJSBd1oQJoUbSo1XdnX5tJ6SOYz9bWrBRsY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Local-8000}}/categories/search?q=PC",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "categories",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "PC"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Detail",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcwNjYxMjYsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.26L4ZZyHKJSBd1oQJoUbSo1XdnX5tJ6SOYz9bWrBRsY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Local-8000}}/categories/5e85a123-942c-49d8-a2c3-7a043abe3771",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "categories",
+                "5e85a123-942c-49d8-a2c3-7a043abe3771"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcwNjYxMjYsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.26L4ZZyHKJSBd1oQJoUbSo1XdnX5tJ6SOYz9bWrBRsY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"PC\",\n    \"description\": \"Komputers\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Local-8000}}/categories/5e85a123-942c-49d8-a2c3-7a043abe3771",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "categories",
+                "5e85a123-942c-49d8-a2c3-7a043abe3771"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcwNjYxMjYsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.26L4ZZyHKJSBd1oQJoUbSo1XdnX5tJ6SOYz9bWrBRsY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{Local-8000}}/categories/5e85a123-942c-49d8-a2c3-7a043abe3771",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "categories",
+                "5e85a123-942c-49d8-a2c3-7a043abe3771"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "products",
+      "item": [
+        {
+          "name": "List",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcwOTU1NjAsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.O3PeFeIg_f1x1UDBaYlZsEfASt_bO3QhO01eAQY3R0I",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Local-8000}}/products",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcwOTU1NjAsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.O3PeFeIg_f1x1UDBaYlZsEfASt_bO3QhO01eAQY3R0I",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Laptop A21\",\n    \"categorie_id\": \"8ef43335-848c-47d3-a3b4-90cca75b2b27\",\n    \"merek\": \"Asus\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Local-8000}}/products",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Search",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcwODg2NzMsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.gzAaQTBTRnPcMUnpA2FcjJlR0ZFcgDiwN4TXW-3wXqQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Local-8000}}/products/search?q=Laptop A12",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "products",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "Laptop A12"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Detail",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcwODg2NzMsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.gzAaQTBTRnPcMUnpA2FcjJlR0ZFcgDiwN4TXW-3wXqQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Local-8000}}/products/e086bac1-dbc0-461a-9b87-0aea5cebe060",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "products",
+                "e086bac1-dbc0-461a-9b87-0aea5cebe060"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcwODg2NzMsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.gzAaQTBTRnPcMUnpA2FcjJlR0ZFcgDiwN4TXW-3wXqQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Laptops A20\",\n    \"categorie_id\": \"8ef43335-848c-47d3-a3b4-90cca75b2b27\",\n    \"merek\": \"Asus\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Local-8000}}/products/e086bac1-dbc0-461a-9b87-0aea5cebe060",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "products",
+                "e086bac1-dbc0-461a-9b87-0aea5cebe060"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcwODg2NzMsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.gzAaQTBTRnPcMUnpA2FcjJlR0ZFcgDiwN4TXW-3wXqQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{Local-8000}}/products/e086bac1-dbc0-461a-9b87-0aea5cebe060",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "products",
+                "e086bac1-dbc0-461a-9b87-0aea5cebe060"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "warehouses",
+      "item": [
+        {
+          "name": "List",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcxMTA2MDAsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.7Yol029EronmqGdnwQdjQ4QTJo_hJKtxPpEQs9wEizc",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Local-8000}}/warehouses",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "warehouses"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcwOTU1NjAsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.O3PeFeIg_f1x1UDBaYlZsEfASt_bO3QhO01eAQY3R0I",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"product_id\": \"6afeacb5-763e-439e-b0f5-a4e8ffc45638\",\n    \"stock\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Local-8000}}/warehouses",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "warehouses"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Search",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcwOTU1NjAsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.O3PeFeIg_f1x1UDBaYlZsEfASt_bO3QhO01eAQY3R0I",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Local-8000}}/warehouses/search?q=Laptop A20",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "warehouses",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "Laptop A20"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Detail",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcwOTU1NjAsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.O3PeFeIg_f1x1UDBaYlZsEfASt_bO3QhO01eAQY3R0I",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Local-8000}}/warehouses/4a59544f-4281-4661-9cf3-36883c73bd24",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "warehouses",
+                "4a59544f-4281-4661-9cf3-36883c73bd24"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcwOTU1NjAsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.O3PeFeIg_f1x1UDBaYlZsEfASt_bO3QhO01eAQY3R0I",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"product_id\": \"e165d0fd-8237-4121-8160-5f1d44757062\",\n    \"stock\": 11,\n    \"status\": \"Ready\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Local-8000}}/warehouses/4a59544f-4281-4661-9cf3-36883c73bd24",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "warehouses",
+                "4a59544f-4281-4661-9cf3-36883c73bd24"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcwOTU1NjAsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.O3PeFeIg_f1x1UDBaYlZsEfASt_bO3QhO01eAQY3R0I",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{Local-8000}}/warehouses/4a59544f-4281-4661-9cf3-36883c73bd24",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "warehouses",
+                "4a59544f-4281-4661-9cf3-36883c73bd24"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "maintenances",
+      "item": [
+        {
+          "name": "List",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcxNTU0NzAsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.ltt9z4qbIv6RwuOUwdX1OAD2g0hvpk00id4612M3CWI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Local-8000}}/maintenances",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "maintenances"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcxMDkxNTksImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.0b04n_3sP1SRE6EJX2_6qJQb7a1Ekih5fZL0oh6DQEU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"description\": \"Pc tidak bisa hidup\",\n    \"start_date\": \"2025-05-10\",\n    \"stock\": 2\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Local-8000}}/warehouses/b92df79c-bd16-448e-846a-d61b85ef4c8b/maintenances",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "warehouses",
+                "b92df79c-bd16-448e-846a-d61b85ef4c8b",
+                "maintenances"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Search",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcxMDkxNTksImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.0b04n_3sP1SRE6EJX2_6qJQb7a1Ekih5fZL0oh6DQEU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Local-8000}}/maintenances/search?q=Laptop",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "maintenances",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "Laptop"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcxMTA2MDAsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.7Yol029EronmqGdnwQdjQ4QTJo_hJKtxPpEQs9wEizc",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"description\": \"Pc tidak bisa hidup\",\n    \"status\": \"Rusak\",\n    \"end_date\": \"2025-05-11\",\n    \"stock\": 2\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Local-8000}}/maintenances/6fe490ac-3139-4539-9522-8fc73cbbcc75",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "maintenances",
+                "6fe490ac-3139-4539-9522-8fc73cbbcc75"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcxMTA2MDAsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.7Yol029EronmqGdnwQdjQ4QTJo_hJKtxPpEQs9wEizc",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{Local-8000}}/maintenances/6fe490ac-3139-4539-9522-8fc73cbbcc75",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "maintenances",
+                "6fe490ac-3139-4539-9522-8fc73cbbcc75"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "finances",
+      "item": [
+        {
+          "name": "List",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcxNTU0NzAsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.ltt9z4qbIv6RwuOUwdX1OAD2g0hvpk00id4612M3CWI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Local-8000}}/finances",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "finances"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcxNTU0NzAsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.ltt9z4qbIv6RwuOUwdX1OAD2g0hvpk00id4612M3CWI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"description\": \"Kurakan di cpu\",\n    \"price\": 10000\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Local-8000}}/maintenances/46ffd051-495b-492a-a0f9-77d7ae45ea1e/finances",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "maintenances",
+                "46ffd051-495b-492a-a0f9-77d7ae45ea1e",
+                "finances"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Search",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcxNTU0NzAsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.ltt9z4qbIv6RwuOUwdX1OAD2g0hvpk00id4612M3CWI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Local-8000}}/finances/search?q=Admin",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "finances",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "Admin"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcxNTU0NzAsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.ltt9z4qbIv6RwuOUwdX1OAD2g0hvpk00id4612M3CWI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"description\": \"Kurakan di cpu M\",\n    \"price\": 10000\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Local-8000}}/finances/60ff8f85-37de-4f1f-a6b4-943a6bf5b9a9",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "finances",
+                "60ff8f85-37de-4f1f-a6b4-943a6bf5b9a9"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Detail",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcxNTU0NzAsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.ltt9z4qbIv6RwuOUwdX1OAD2g0hvpk00id4612M3CWI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Local-8000}}/finances/60ff8f85-37de-4f1f-a6b4-943a6bf5b9a9",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "finances",
+                "60ff8f85-37de-4f1f-a6b4-943a6bf5b9a9"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzcxNTU0NzAsImlkIjoiYzFmMWMwMmItYmI0Yi00NDUxLTllZDEtZDFiMWMwZGI5MmFjIiwicm9sZSI6IkFkbWluIiwic3RhdHVzIjoiQWt0aWYiLCJ1c2VybmFtZSI6IkFkbWluIn0.ltt9z4qbIv6RwuOUwdX1OAD2g0hvpk00id4612M3CWI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{Local-8000}}/finances/60ff8f85-37de-4f1f-a6b4-943a6bf5b9a9",
+              "host": [
+                "{{Local-8000}}"
+              ],
+              "path": [
+                "finances",
+                "60ff8f85-37de-4f1f-a6b4-943a6bf5b9a9"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"Admin\",\n    \"password\": \"Ab123.Ab\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{Local-8000}}/login",
+          "host": [
+            "{{Local-8000}}"
+          ],
+          "path": [
+            "login"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

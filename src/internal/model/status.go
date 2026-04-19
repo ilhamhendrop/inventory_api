@@ -1,5 +1,8 @@
 package model
 
 const (
-	UserStatusAktif = "Aktif"
+	UserStatusAktif           = "Aktif"
+	WarehouseStatusReady      = "Ready"
+	MaintenanceStatusDiproses = "Diproses"
+	MaintenanceStatusRusak    = "Rusak"
 )

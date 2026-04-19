@@ -44,16 +44,25 @@ func main() {
 	userRepo := repository.NewUser(dbConnect, cacheConnect, cnf.Server.Host)
 	categorieRepo := repository.NewCategorie(dbConnect, cacheConnect, cnf.Server.Host)
 	productRepo := repository.NewProduct(dbConnect, cacheConnect, cnf.Server.Host)
+	warehouseRepo := repository.NewWarehouse(dbConnect, cacheConnect, cnf.Server.Host)
+	maintenanceRepo := repository.NewMaintenance(dbConnect, cacheConnect, cnf.Server.Host)
+	financeRepo := repository.NewFinance(dbConnect, cacheConnect, cnf.Server.Host)
 
 	authService := service.NewAuth(cnf, authRepo)
 	userService := service.NewUser(userRepo)
 	categorieService := service.NewCategorie(categorieRepo)
 	productService := service.NewProduct(productRepo, categorieRepo)
+	warehouseService := service.NewWarehouse(warehouseRepo, productRepo, categorieRepo)
+	maintenanceService := service.NewMaintenance(maintenanceRepo, productRepo, categorieRepo, warehouseRepo, userRepo)
+	financeService := service.NewFinance(financeRepo, maintenanceRepo, userRepo, productRepo, categorieRepo)
 
 	api.NewAuth(app, authService)
 	api.NewUser(app, userService, jwt)
 	api.NewCategorie(app, categorieService, jwt)
 	api.NewProduct(app, productService, jwt)
+	api.NewWarehouse(app, warehouseService, jwt)
+	api.NewMaintenance(app, maintenanceService, jwt)
+	api.NewFinance(app, financeService, jwt)
 
 	_ = app.Listen(cnf.Server.Host + ":" + cnf.Server.Port)
 }
